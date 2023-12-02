@@ -96,7 +96,7 @@ in {
 
     # SECTION: HOSTAPD
     # Hostapd refuses to work properly after resume. Restarting on resume solves this problem.
-    std.misc.restartOnResumeServices = [ "hostapd" ];
+    # std.misc.restartOnResumeServices = [ "hostapd" ];
     environment.systemPackages = [ pkgs.hostapd ];
 
     systemd.services.hostapd = let
