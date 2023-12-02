@@ -34,7 +34,7 @@ in {
     boot.extraModulePackages = [ cfg.package ];
 
     # Currently, due to absence of power management, xmm7360 needs to be brought down and reconnected on resume.
-    std.misc.restartOnResumeServices = [ "xmm7360" ];
+    # std.misc.restartOnResumeServices = [ "xmm7360" ];
     systemd.services.xmm7360 = let
       inherit (pkgs) kmod;
       # Be ensured that the device is freshly booted
